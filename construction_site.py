@@ -1,6 +1,8 @@
+from datetime import datetime
+
 class ConstructionSite:
     def __init__(self, start_date) -> None:
-        self._start_date = start_date
+        self._start_date = datetime.strptime(start_date, "%Y-%m-%d")
 
-    def progressAt(self) -> str:
+    def progressAt(self) -> datetime:
         return self._start_date
